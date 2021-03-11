@@ -1,0 +1,57 @@
+from random import randint
+import sys
+
+dict = {1: 'rock', 2: 'paper', 3:'scissors'}
+
+def User():
+    while True:
+        try:
+            global count
+            count = 0
+            global user
+            user = str(input("What move do you want to make? (rock, paper, or scissors): "))
+            user = user.lower()
+            if user == 'rock':
+                count = 1
+            elif user == 'paper':
+                count = 2
+            elif user == 'scissors':
+                count = 3
+            else:
+                print("Enter rock, paper, or scissors")
+            Computer()
+        except ValueError:
+            print("Enter rock, paper, or scissors")
+
+def Computer():
+    global dict
+    for i in range(1):
+        global computer
+        computer = randint(0, 3)
+        print("The computer picked " + dict[computer])
+    Winner()
+
+def Winner():
+    if ((count + 2) % 3) == computer:
+        print("You won!")
+        PlayAgain()
+    elif ((count + 1) % 3) == computer:
+        print("The computer won!")
+        PlayAgain()
+    else:
+        print("It's a tie!")
+        PlayAgain()
+
+def PlayAgain():
+    while True:
+        try:
+            again = str(input("Would you like to play again? (y or n): "))
+            if again == 'y':
+                User()
+            else:
+                print("Goodbye")
+                sys.exit()
+        except ValueError:
+            print("Enter y or n please")
+
+User()
