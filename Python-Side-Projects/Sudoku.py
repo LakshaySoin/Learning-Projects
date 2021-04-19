@@ -1,3 +1,5 @@
+import sys
+
 def AskUser(numbers):
     try:
         for i in range(9):
