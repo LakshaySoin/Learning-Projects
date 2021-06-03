@@ -1,5 +1,3 @@
-import pdb
-
 class Reverse:
 	def __init__(self, *args):
 		self.vals = list(args)	
@@ -17,9 +15,7 @@ class Reverse:
 		del self.vals[-1]
 		return num
 
-#for i in Reverse(10, 11, 12, 13, 14):
-for i in Reverse(10, 11):
-	#pdb.set_trace()
+for i in Reverse(10, 11, 12, 13, 14):
 	print(i, end = " ")
 print()
 		
