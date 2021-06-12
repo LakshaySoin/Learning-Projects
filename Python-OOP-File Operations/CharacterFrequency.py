@@ -1,3 +1,6 @@
+#Author: Lakshay Soin
+#Finds the amount of characters in the file that the user inputs interactively
+
 from os import strerror
 
 dict = {}
