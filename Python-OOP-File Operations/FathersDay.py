@@ -3,7 +3,7 @@ from random import randint
 class FathersDay:
 	def __init__(self, name):
 		self.name = name.upper()
-		self.random_message = randint(0, 4)
+		self.random_message = randint(0, 3)
 		self.mes = {'A':['Awesome','Adorable','Adventurous','Amazing'],
 			   'B':['Beautiful','Beaming','Brilliant','Beneficial'],
 			   'C':['Champion','Celebrated','Charming','Curious'],
